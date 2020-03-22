@@ -2,6 +2,7 @@
 def permutations?(string1, string2)
   raise ArgumentError, "First parameter must be String" unless string1.is_a?(String)
   raise ArgumentError, "Second parameter must be String" unless string2.is_a?(String)
+  
   return false if string1.length != string2.length
 
   letter_hash1 = Hash.new(0)
@@ -10,7 +11,6 @@ def permutations?(string1, string2)
   string2.split("").each { |l| letter_hash2[l] += 1}
 
   return letter_hash1 == letter_hash2
-
 end
 
 # ("hello", "ehllo")

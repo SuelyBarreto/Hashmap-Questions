@@ -6,5 +6,4 @@ def palindrome_permutation?(string)
   string.split("").each { |l| letter_hash[l] += 1}
 
   return letter_hash.select { |k, v| v.odd? }.size <= 1
-
 end
